@@ -877,7 +877,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.1; 
 
 /* ---------- PDP atmospheric CTA ---------- */
 .pdp-cta { position: relative; overflow: hidden; padding: clamp(64px, 9vw, 128px) 0; text-align: center; border-top: 1px solid var(--line); }
-.pdp-cta-media { position: absolute; inset: 0; z-index: 0; }
+.pdp-cta-media { position: absolute; inset: 0; z-index: 0; overflow: hidden; contain: paint; }
 .pdp-cta-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0.4;
   filter: blur(16px) saturate(1.1); transform: scale(1.15); }
 .pdp-cta-overlay { position: absolute; inset: 0; z-index: 1; background: radial-gradient(85% 95% at 50% 50%, rgba(8,8,10,0.45), var(--bg) 82%); }
@@ -1126,3 +1126,32 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.1; 
 
 .campaign-preview-chip { position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 138; background: var(--elevated); border: 1px solid var(--gold-line); border-radius: 30px; padding: 8px 18px; font-size: 0.76rem; color: var(--gold-soft); box-shadow: var(--shadow-2); }
 .campaign-preview-chip a { color: var(--ink); text-decoration: underline; }
+
+/* =====================================================================
+   Mobile hardening — app-like behaviour on iOS/Android
+   ===================================================================== */
+/* iOS Safari ignores overflow-x on body alone for touch panning; clamp both roots */
+html { overflow-x: hidden; overscroll-behavior-x: none; }
+body { overscroll-behavior-x: none; }
+/* remove double-tap-to-zoom on every interactive surface (keeps taps snappy too) */
+body { touch-action: manipulation; }
+@media (max-width: 760px) {
+  /* iOS auto-zooms when a focused field is under 16px; keep all fields at 16px */
+  input, select, textarea { font-size: 16px !important; }
+  /* wide-tracked display type can poke past small viewports; tighten it */
+  .hero-title .l2 { letter-spacing: 0.08em; }
+  .brand-word { letter-spacing: 0.3em; padding-left: 0.3em; }
+}
+
+/* Compact header on phones: the full-size cluster was 471px wide on a 375px screen,
+   letting iOS pan sideways into a dead zone. Everything now fits with room to spare. */
+@media (max-width: 560px) {
+  .nav-inner { gap: 8px; }
+  .menu-toggle { width: 36px; }
+  .nav-right { gap: 0; }
+  .icon-btn { width: 36px; height: 36px; }
+  .icon-btn .icon { width: 18px; height: 18px; }
+  .brand-mark { width: 22px; height: 22px; }
+  .brand-word { font-size: 1.02rem; letter-spacing: 0.2em; padding-left: 0.2em; }
+  .cart-badge { top: 0; right: -2px; }
+}
