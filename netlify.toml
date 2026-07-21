@@ -1,0 +1,18 @@
+# Netlify config (C9). The site is pre-built static; this documents build + caching.
+[build]
+  command = "npm run build"
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Headers also live in ./_headers (used by Netlify and Cloudflare Pages).
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"

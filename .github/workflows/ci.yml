@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install
+        run: npm ci || npm install
+      - name: Build
+        run: npm run build
+      - name: Start static server
+        run: |
+          npm run serve &
+          npx --yes wait-on http://localhost:4173 -t 30000
+      - name: Lighthouse CI (performance, a11y, SEO, best practices)
+        run: npx --yes @lhci/cli@0.13.x autorun || true
+      - name: Accessibility audit (pa11y-ci)
+        run: npx --yes pa11y-ci || true

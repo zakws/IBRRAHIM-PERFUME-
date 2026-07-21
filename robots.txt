@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /pages/checkout.html
+Disallow: /pages/confirmation.html
+
+Sitemap: https://www.ibrahimfragrances.com.au/sitemap.xml

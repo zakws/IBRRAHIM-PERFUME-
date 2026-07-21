@@ -1,0 +1,13 @@
+{
+  "defaults": {
+    "timeout": 30000,
+    "wait": 600,
+    "standard": "WCAG2AA"
+  },
+  "urls": [
+    "http://localhost:4173/",
+    "http://localhost:4173/products/magic-caramel.html",
+    "http://localhost:4173/pages/discovery.html",
+    "http://localhost:4173/pages/checkout.html"
+  ]
+}

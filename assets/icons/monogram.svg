@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="IBRAHIM monogram">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9cd8b"/>
+      <stop offset="0.45" stop-color="#c79a4e"/>
+      <stop offset="0.55" stop-color="#b98b3d"/>
+      <stop offset="1" stop-color="#e4c583"/>
+    </linearGradient>
+  </defs>
+  <!-- Refined serif capital I: stem + bracketed serifs, drawn as vector (no font dependency) -->
+  <g fill="url(#gold)">
+    <rect x="45" y="24" width="10" height="52"/>
+    <!-- top serif -->
+    <path d="M35 24 h30 v4.2 c-4.5 0.3 -8 1.4 -8 4.6 h-14 c0 -3.2 -3.5 -4.3 -8 -4.6 z"/>
+    <!-- bottom serif -->
+    <path d="M35 76 h30 v-4.2 c-4.5 -0.3 -8 -1.4 -8 -4.6 h-14 c0 3.2 -3.5 4.3 -8 4.6 z"/>
+  </g>
+</svg>

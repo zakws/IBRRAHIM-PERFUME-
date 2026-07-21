@@ -1,0 +1,23 @@
+{
+  "name": "ibrahim-store",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "IBRAHIM Fragrances — a luxury front-end fragrance store. Static, framework-free, self-contained.",
+  "scripts": {
+    "images": "node build/process-images.js",
+    "render": "node build/render.js",
+    "feeds": "node build/feeds.js",
+    "emails": "node build/emails.js",
+    "build": "node build/process-images.js && node build/render.js && node build/feeds.js && node build/emails.js",
+    "serve": "node build/serve.js",
+    "start": "node build/serve.js",
+    "dev": "node build/render.js && node build/serve.js"
+  },
+  "keywords": ["fragrance", "perfume", "ecommerce", "static", "luxury", "ibrahim"],
+  "author": "IBRAHIM Fragrances",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "sharp": "^0.35.3"
+  }
+}

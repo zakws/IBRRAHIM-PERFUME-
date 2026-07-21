@@ -1,0 +1,23 @@
+# Netlify / Cloudflare Pages headers (C9)
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'
+
+# Long-cache immutable media
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/icons/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Revalidate code so deploys land promptly
+/styles/*
+  Cache-Control: public, max-age=3600, must-revalidate
+/scripts/*
+  Cache-Control: public, max-age=3600, must-revalidate
+/sw.js
+  Cache-Control: no-cache
