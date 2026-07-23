@@ -131,7 +131,7 @@ function mobileNav(base, active) {
       ${links}
     </div>
     <div class="mnav-foot">
-      <p>${brand.email}</p>
+      <p><a href="tel:${brand.phoneTel}">${brand.phone}</a></p>
       <p>${brand.city}</p>
     </div>
   </nav>`;

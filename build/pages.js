@@ -620,8 +620,7 @@ function contact(base) {
       </div>
       <div class="contact-grid">
         <div class="contact-card" data-reveal>
-          ${info('mail', 'Email', brand.email, 'mailto:' + brand.email)}
-          ${info('mail', 'Customer Care', brand.supportEmail, 'mailto:' + brand.supportEmail)}
+          ${info('phone', 'Phone', brand.phone, 'tel:' + brand.phoneTel)}
           ${info('pin', 'Studio', brand.city)}
           ${info('clock', 'Hours', 'Monday to Friday, 9am to 5pm AEST')}
           ${info('instagram', 'Instagram', brand.instagram.handle, brand.instagram.url)}
@@ -892,7 +891,7 @@ const ld = (obj) => `<script type="application/ld+json">${JSON.stringify(obj)}</
 function jsonldOrg() {
   return ld({
     '@context': 'https://schema.org', '@type': 'Organization',
-    name: BRAND, url: DOMAIN + '/', email: brand.email, logo: DOMAIN + '/assets/icons/icon-512.png',
+    name: BRAND, url: DOMAIN + '/', telephone: brand.phone, logo: DOMAIN + '/assets/icons/icon-512.png',
     address: { '@type': 'PostalAddress', addressLocality: 'Sydney', addressCountry: 'AU' },
     sameAs: [brand.instagram.url, brand.tiktok.url, brand.facebook.url, brand.youtube.url],
   });

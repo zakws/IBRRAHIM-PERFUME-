@@ -51,8 +51,8 @@ function returns(base) {
       p('If you have opened a bottle and it is not right for you, we offer an exchange or store credit within 30 days. Fragrance is personal, and the Discovery Set is the best way to try before committing.'),
       h2('How to start a return'),
       ul([
-        'Contact ' + brand.supportEmail + ' with your order number.',
-        'We will email a prepaid return label.',
+        'Call us on ' + brand.phone + ' with your order number.',
+        'We will send a prepaid return label.',
         'Refunds are processed within 5 business days of us receiving the return.',
       ]),
       h2('Damaged or incorrect items'),
@@ -70,7 +70,7 @@ function privacy(base) {
       h2('What we would never do'),
       ul(['Sell your data.', 'Store card details on our own servers.', 'Email you without consent.']),
       h2('Your choices'),
-      p('You would be able to access, correct or delete your information at any time by contacting ' + brand.supportEmail + '.'),
+      p('You would be able to access, correct or delete your information at any time by calling us on ' + brand.phone + '.'),
     ].join('')));
 }
 
@@ -84,7 +84,7 @@ function terms(base) {
       h2('Intellectual property'),
       p('The IBRAHIM name, bottle design and imagery are used here for the purpose of this demonstration project.'),
       h2('Contact'),
-      p('Questions about these terms can be sent to ' + brand.email + '.'),
+      p('Questions about these terms can be directed to us on ' + brand.phone + '.'),
     ].join('')));
 }
 
@@ -104,7 +104,7 @@ function storeLocator(base) {
     prose([
       p('IBRAHIM is primarily an online house, shipping Australia-wide from ' + brand.city + '. We appear at select pop-ups and stockists through the year.'),
       h2('Flagship studio'),
-      p(brand.city + '. Private appointments only, by request through ' + brand.supportEmail + '.'),
+      p(brand.city + '. Private appointments only, by request on ' + brand.phone + '.'),
       h2('Stockists'),
       p('Stockist locations are announced to the newsletter first. A live store would show an interactive map here.'),
     ].join('')));
