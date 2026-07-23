@@ -9,6 +9,7 @@
     "render": "node build/render.js",
     "feeds": "node build/feeds.js",
     "emails": "node build/emails.js",
+    "shopify": "node build/shopify-csv.js",
     "build": "node build/process-images.js && node build/render.js && node build/feeds.js && node build/emails.js",
     "serve": "node build/serve.js",
     "start": "node build/serve.js",

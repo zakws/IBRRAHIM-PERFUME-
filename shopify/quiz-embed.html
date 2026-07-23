@@ -1,0 +1,83 @@
+<!-- IBRAHIM scent quiz — Shopify page embed.
+     How to use: Shopify admin → Online Store → Pages → Add page → title "Find Your Scent"
+     → in the content editor click the <> (code) button → paste ALL of this → Save.
+     Product links use /products/<handle> which match the import CSV handles. -->
+<div id="ibq" style="max-width:640px;margin:0 auto;color:inherit">
+  <style>
+    #ibq .ibq-progress{height:4px;border-radius:4px;background:rgba(128,128,128,.25);overflow:hidden;margin:0 0 28px}
+    #ibq .ibq-progress span{display:block;height:100%;width:0;background:#c79a4e;transition:width .4s ease}
+    #ibq .ibq-step{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#c79a4e;text-align:center;margin:0 0 6px}
+    #ibq h2{font-size:28px;text-align:center;margin:0 0 24px;font-weight:500}
+    #ibq .ibq-opt{display:block;width:100%;text-align:left;border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:10px;padding:15px 18px;font-size:16px;margin:0 0 10px;cursor:pointer;transition:border-color .25s ease,transform .25s ease}
+    #ibq .ibq-opt:hover{border-color:#c79a4e;transform:translateX(4px)}
+    #ibq .ibq-result{border:1px solid #c79a4e;border-radius:12px;overflow:hidden;text-align:center}
+    #ibq .ibq-result img{width:100%;max-width:420px;height:auto;display:block;margin:0 auto}
+    #ibq .ibq-result .ibq-body{padding:22px}
+    #ibq .ibq-eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#c79a4e;margin:0 0 6px}
+    #ibq .ibq-name{font-size:30px;margin:0 0 6px;font-weight:500}
+    #ibq .ibq-fam{opacity:.75;margin:0 0 14px}
+    #ibq .ibq-cta{display:inline-block;background:#c79a4e;color:#17110a;text-decoration:none;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px;padding:14px 30px;border-radius:4px;margin:6px 4px}
+    #ibq .ibq-alt{display:inline-block;border:1px solid rgba(128,128,128,.5);color:inherit;text-decoration:none;letter-spacing:.12em;text-transform:uppercase;font-size:13px;padding:14px 30px;border-radius:4px;margin:6px 4px}
+    #ibq .ibq-retake{background:none;border:none;color:#c79a4e;text-decoration:underline;cursor:pointer;font-size:14px;margin-top:14px}
+  </style>
+  <div class="ibq-progress"><span id="ibq-bar"></span></div>
+  <div id="ibq-stage" aria-live="polite"></div>
+</div>
+<script>
+(function(){
+  var IMG='https://zakws.github.io/IBRRAHIM-PERFUME-/assets/images/products/';
+  var P={
+    'sultan-oud':{n:'Sultan Oud',f:'Dark Amber',t:'Deep. Refined. Commanding.',img:IMG+'sultan-oud-front-card.jpg'},
+    'glamorous':{n:'Glamorous',f:'Rose Gold',t:'Radiant. Elegant. Magnetic.',img:IMG+'glamorous-front-card.jpg'},
+    'blue-chill':{n:'Blue Chill',f:'Ocean Blue',t:'Crisp. Cool. Energising.',img:IMG+'blue-chill-front-card.jpg'},
+    'charizma':{n:'Charizma',f:'Warm Amber',t:'Warm. Bold. Charismatic.',img:IMG+'charizma-front-card.jpg'},
+    'magic-caramel':{n:'Magic Caramel',f:'Rich Amber Gourmand',t:'Warm. Addictive. Unforgettable.',img:IMG+'magic-caramel-front-card.jpg'}
+  };
+  var Q=[
+    {q:'How do you want to feel?',a:[
+      ['Warm and bold',{'charizma':2,'sultan-oud':1}],
+      ['Fresh and clean',{'blue-chill':3}],
+      ['Radiant and elegant',{'glamorous':3}],
+      ['Deep and mysterious',{'sultan-oud':3}],
+      ['Sweet and comforting',{'magic-caramel':3}]]},
+    {q:'When will you wear it?',a:[
+      ['Everyday',{'blue-chill':2,'glamorous':1}],
+      ['Evenings out',{'charizma':2,'magic-caramel':1}],
+      ['Special occasions',{'sultan-oud':2,'glamorous':1}]]},
+    {q:'Which world draws you in?',a:[
+      ['Amber and oud wood',{'sultan-oud':2}],
+      ['Ocean and citrus',{'blue-chill':2}],
+      ['Rose and soft petals',{'glamorous':2}],
+      ['Spice and warm resin',{'charizma':2}],
+      ['Caramel and vanilla',{'magic-caramel':2}]]}
+  ];
+  var idx=0,scores={},stage=document.getElementById('ibq-stage'),bar=document.getElementById('ibq-bar');
+  function render(){
+    bar.style.width=Math.round(idx/Q.length*100)+'%';
+    var o=Q[idx];
+    stage.innerHTML='<p class="ibq-step">Question '+(idx+1)+' of '+Q.length+'</p><h2>'+o.q+'</h2>'+
+      o.a.map(function(a,i){return '<button type="button" class="ibq-opt" data-i="'+i+'">'+a[0]+'</button>';}).join('');
+  }
+  function result(){
+    bar.style.width='100%';
+    var best=null,bs=-1;
+    Object.keys(P).forEach(function(k){var s=scores[k]||0;if(s>bs){bs=s;best=k;}});
+    var p=P[best];
+    stage.innerHTML='<div class="ibq-result"><img src="'+p.img+'" alt="'+p.n+'" width="420" height="420">'+
+      '<div class="ibq-body"><p class="ibq-eyebrow">Your match</p><h2 class="ibq-name">'+p.n+'</h2>'+
+      '<p class="ibq-fam">'+p.f+' &middot; '+p.t+'</p>'+
+      '<a class="ibq-cta" href="/products/'+best+'">Discover '+p.n+'</a>'+
+      '<a class="ibq-alt" href="/products/discovery-set">Try all five, $35</a><br>'+
+      '<button type="button" class="ibq-retake" id="ibq-retake">Retake the quiz</button></div></div>';
+    var r=document.getElementById('ibq-retake');
+    if(r)r.addEventListener('click',function(){idx=0;scores={};render();});
+  }
+  stage.addEventListener('click',function(e){
+    var b=e.target.closest('.ibq-opt');if(!b)return;
+    var w=Q[idx].a[parseInt(b.getAttribute('data-i'),10)][1];
+    for(var k in w)scores[k]=(scores[k]||0)+w[k];
+    idx++; if(idx>=Q.length)result();else render();
+  });
+  render();
+})();
+</script>
