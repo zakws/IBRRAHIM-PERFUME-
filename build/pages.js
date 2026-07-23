@@ -146,10 +146,10 @@ function home(base) {
     <div class="container">
       <div class="stats-grid" data-reveal-stagger>
         <div class="stat"><div class="stat-num" data-count="5">0</div><div class="stat-label">Signature Fragrances</div></div>
-        <div class="stat"><div class="stat-num" data-count="90" data-suffix=" mL">0</div><div class="stat-label">Per Bottle</div></div>
-        <div class="stat"><div class="stat-num" data-count="35" data-prefix="$">0</div><div class="stat-label">Discovery, Redeemable</div></div>
-        <div class="stat"><div class="stat-num" data-count="180" data-prefix="$">0</div><div class="stat-label">Free Shipping Over</div></div>
-        <div class="stat"><div class="stat-num" data-count="151" data-prefix="$">0</div><div class="stat-label">Saved On The Full Set</div></div>
+        <div class="stat"><div class="stat-num" data-count="100" data-suffix=" mL">0</div><div class="stat-label">Per Bottle</div></div>
+        <div class="stat"><div class="stat-num" data-count="45" data-prefix="$">0</div><div class="stat-label">Discovery, Redeemable</div></div>
+        <div class="stat"><div class="stat-num" data-count="150" data-prefix="$">0</div><div class="stat-label">Free Shipping Over</div></div>
+        <div class="stat"><div class="stat-num" data-count="80" data-prefix="$">0</div><div class="stat-label">Saved On The Full Set</div></div>
       </div>
     </div>
   </section>`;
@@ -166,11 +166,11 @@ function home(base) {
       <div class="trust-grid" data-reveal-stagger>
         ${pillar('gem', 'Eau de Parfum', 'A rich, long-wearing concentration made for real presence and stay.')}
         ${pillar('sparkle', 'One Bottle Language', 'A consistent, recognisable flacon across the entire collection.')}
-        ${pillar('truck', 'Free Shipping', 'Complimentary delivery on orders over $180 and on every bundle.')}
+        ${pillar('truck', 'Free Shipping', 'Complimentary delivery on orders over $150 and on every bundle.')}
         ${pillar('shield', 'Secure &amp; Simple', 'Easy 30-day returns and a secure, considered checkout.')}
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:26px;justify-content:center;margin-top:46px;color:var(--muted);font-size:0.82rem;letter-spacing:0.06em" data-reveal>
-        ${svc('Free shipping over $180')} ${svc('30-day easy returns')} ${svc('Secure checkout')} ${svc('Australian support')}
+        ${svc('Free shipping over $150')} ${svc('30-day easy returns')} ${svc('Secure checkout')} ${svc('Australian support')}
       </div>
     </div>
   </section>`;
@@ -210,10 +210,10 @@ function offersSection(base) {
         <p class="section-sub">Every offer adds straight to your bag, at its correct bundle price.</p>
       </div>
       <div class="offer-grid" data-reveal-stagger>
-        ${card({ tier: 'Any 2 Fragrances', price: '$230', save: 'Save $30', desc: 'Choose any two full-size scents.', media: thumbs(2), action: `<a class="btn btn--ghost btn--block" href="${u(base, 'pages/bundles.html')}#duo" data-magnetic><span class="btn__label">Choose 2</span></a>` })}
-        ${card({ tier: 'Any 3 Fragrances', price: '$320', save: 'Save $70', desc: 'Choose any three full-size scents.', media: thumbs(3), action: `<a class="btn btn--ghost btn--block" href="${u(base, 'pages/bundles.html')}#trio" data-magnetic><span class="btn__label">Choose 3</span></a>` })}
-        ${card({ tier: 'The Discovery Set', price: '$35', save: 'Redeemable against a full bottle', desc: 'All five scents in 2 mL travel sprays.', media: thumbs(5), action: `<button class="btn btn--ghost btn--block" data-add-discovery data-magnetic><span class="btn__label">Add Discovery Set</span></button>` })}
-        ${card({ feature: true, badge: 'Best Value', tier: 'The Complete Collection', price: '$499', save: 'Save $151', desc: 'All five full-size fragrances.', media: thumbs(5), action: `<button class="btn btn--primary btn--block" data-add-bundle="full" data-magnetic><span class="btn__label">Add All Five</span></button>` })}
+        ${card({ tier: 'Any 2 Fragrances', price: '$159.99', save: 'Save $20', desc: 'Choose any two full-size scents.', media: thumbs(2), action: `<a class="btn btn--ghost btn--block" href="${u(base, 'pages/bundles.html')}#duo" data-magnetic><span class="btn__label">Choose 2</span></a>` })}
+        ${card({ tier: 'Any 3 Fragrances', price: '$229.99', save: 'Save $40', desc: 'Choose any three full-size scents.', media: thumbs(3), action: `<a class="btn btn--ghost btn--block" href="${u(base, 'pages/bundles.html')}#trio" data-magnetic><span class="btn__label">Choose 3</span></a>` })}
+        ${card({ tier: 'The Discovery Set', price: '$45', save: 'Redeemable against a full bottle', desc: 'All five scents in 3 mL travel sprays.', media: thumbs(5), action: `<button class="btn btn--ghost btn--block" data-add-discovery data-magnetic><span class="btn__label">Add Discovery Set</span></button>` })}
+        ${card({ feature: true, badge: 'Best Value', tier: 'The Complete Collection', price: '$369.99', save: 'Save $80', desc: 'All five full-size fragrances.', media: thumbs(5), action: `<button class="btn btn--primary btn--block" data-add-bundle="full" data-magnetic><span class="btn__label">Add All Five</span></button>` })}
       </div>
     </div>
   </section>`;
@@ -396,7 +396,7 @@ function product(base, p) {
 
           <div class="accordion">
             ${acc('The Story', `<p>${p.story}</p>`, true)}
-            ${acc('Shipping', `<p>Complimentary standard shipping on orders over $180. Standard delivery is ${money(C.shipping.standard)} and arrives in 3 to 5 business days. Express is ${money(C.shipping.express)}, 1 to 2 business days. Dispatched from ${brand.city}.</p>`)}
+            ${acc('Shipping', `<p>Complimentary standard shipping on orders over ${money(C.shipping.freeThreshold, { aud: false })}. Standard delivery is ${money(C.shipping.standard)} and arrives in 3 to 5 business days. Express is ${money(C.shipping.express)}, 1 to 2 business days. Dispatched from ${brand.city}.</p>`)}
             ${acc('Returns', `<p>Unopened fragrances can be returned within 30 days for a full refund. Opened bottles are eligible for exchange or store credit. See our <a class="link-underline" href="${u(base, 'pages/returns.html')}">returns policy</a> for details.</p>`)}
           </div>
         </div>
@@ -462,7 +462,7 @@ function product(base, p) {
 
 /* ============================ DISCOVERY ============================ */
 function discovery(base) {
-  // real matched product images (not fake vials); clearly labelled as 2 mL samples
+  // real matched product images (not fake vials); clearly labelled as 3 mL samples
   const samples = P.map((p) => `<a class="disc-sample" href="${u(base, 'products/' + p.slug + '.html')}" style="--accent:${p.color}">
           <span class="disc-sample-media"><img src="${u(base, p.images.card)}" alt="${p.name} ${p.family}" loading="lazy" width="400" height="400"></span>
           <span class="disc-sample-name">${p.name}</span>
@@ -486,12 +486,12 @@ function discovery(base) {
             <span class="pdp-price">${money(C.discovery.price)}</span>
             <span class="meta">${C.discovery.size} &middot; Eau de Parfum</span>
           </div>
-          <p class="pdp-desc" data-reveal>All five IBRAHIM fragrances in 2 mL travel sprays: Sultan Oud, Glamorous, Blue Chill, Charizma and Magic Caramel. One of each, the considered way to find the one that reads as yours before committing to a full bottle.</p>
+          <p class="pdp-desc" data-reveal>All five IBRAHIM fragrances in 3 mL travel sprays: Sultan Oud, Glamorous, Blue Chill, Charizma and Magic Caramel. One of each, the considered way to find the one that reads as yours before committing to a full bottle.</p>
           <div class="pdp-buy" data-reveal>
             <button class="btn btn--primary btn--lg" data-add-discovery data-magnetic><span class="btn__label">Add Discovery Set &middot; ${money(C.discovery.price, { aud: false })}</span></button>
           </div>
           <div class="redeem-note" data-reveal>
-            ${icon('sparkle')} The full $35 is redeemable against your first full-size bottle.
+            ${icon('sparkle')} The full ${money(C.discovery.redeemable, { aud: false })} is redeemable against your first full-size bottle.
           </div>
         </div>
       </div>
@@ -505,9 +505,9 @@ function discovery(base) {
         <h2 class="section-title section-title--center">Try first, then commit</h2>
       </div>
       <div class="redeem-steps" data-reveal-stagger>
-        ${step('01', 'Order the set', 'Add the Discovery Set for $35 and try all five fragrances at home.')}
+        ${step('01', 'Order the set', 'Add the Discovery Set for $45 and try all five fragrances at home.')}
         ${step('02', 'Find your signature', 'Live with them for a few days and see which one becomes yours.')}
-        ${step('03', 'Redeem $35', 'Apply code DISCOVER35 at checkout on your first full-size bottle and take the full $35 off.')}
+        ${step('03', 'Redeem $45', 'Apply code DISCOVER45 at checkout on your first full-size bottle and take the full $45 off.')}
       </div>
     </div>
   </section>`;
@@ -515,7 +515,7 @@ function discovery(base) {
   return page({
     base, active: 'discovery',
     title: `The Discovery Set — ${BRAND}`,
-    description: 'All five IBRAHIM fragrances in 2 mL travel sprays for $35, fully redeemable against your first full-size bottle.',
+    description: 'All five IBRAHIM fragrances in 3 mL travel sprays for $45, fully redeemable against your first full-size bottle.',
     og: P[0].images.og,
   }, main);
 }
@@ -566,7 +566,7 @@ function bundles(base) {
   return page({
     base, active: 'bundles',
     title: `Build a Bundle — ${BRAND}`,
-    description: 'Build your IBRAHIM fragrance bundle: any 2 for $230, any 3 for $320, or all five for $499.',
+    description: 'Build your IBRAHIM fragrance bundle: any 2 for $159.99, any 3 for $229.99, or all five for $369.99.',
     og: P[0].images.og,
     scripts: ['scripts/bundles.js'],
   }, main);
@@ -682,7 +682,7 @@ function checkout(base) {
           <div class="co-section">
             <h3><span class="n">03</span> Shipping</h3>
             <div class="ship-options" data-ship-options>
-              <label class="ship-option"><input type="radio" name="shipping" value="standard" checked><span class="so-main"><span class="so-name">${C.shipping.standardLabel}</span><span class="so-desc">Free over $180</span></span><span class="so-price" data-standard-price>${money(C.shipping.standard, { aud: false })}</span></label>
+              <label class="ship-option"><input type="radio" name="shipping" value="standard" checked><span class="so-main"><span class="so-name">${C.shipping.standardLabel}</span><span class="so-desc">Free over ${money(C.shipping.freeThreshold, { aud: false })}</span></span><span class="so-price" data-standard-price>${money(C.shipping.standard, { aud: false })}</span></label>
               <label class="ship-option"><input type="radio" name="shipping" value="express"><span class="so-main"><span class="so-name">${C.shipping.expressLabel}</span><span class="so-desc">Priority dispatch</span></span><span class="so-price">${money(C.shipping.express, { aud: false })}</span></label>
             </div>
           </div>
@@ -717,7 +717,7 @@ function checkout(base) {
           <div class="sum-row"><span>Subtotal</span><span data-sum-subtotal>$0 AUD</span></div>
           <div class="sum-row save" data-row-savings hidden><span>Bundle savings</span><span data-sum-savings>-$0 AUD</span></div>
           <div class="sum-row discount" data-row-discount hidden><span data-discount-label>Discount</span><span data-sum-discount>-$0 AUD</span></div>
-          <div class="sum-row" data-row-credit hidden><span>Discovery credit</span><span class="save" data-sum-credit>-$35 AUD</span></div>
+          <div class="sum-row" data-row-credit hidden><span>Discovery credit</span><span class="save" data-sum-credit>-$45 AUD</span></div>
           <div class="sum-row" data-row-gift hidden><span>Gift wrapping</span><span data-sum-gift>+$6 AUD</span></div>
           <div class="sum-row"><span>Shipping</span><span data-sum-shipping>$0 AUD</span></div>
           <div class="sum-row total"><span>Total</span><span data-sum-total>$0 AUD</span></div>

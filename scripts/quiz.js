@@ -80,7 +80,7 @@
             '<a class="btn btn--primary" href="' + base + 'products/' + p.slug + '.html"><span class="btn__label">Discover ' + p.name + '</span></a>' +
             '<button class="btn btn--ghost" data-add-product="' + p.slug + '"><span class="btn__label">Add to Bag</span></button>' +
           '</div>' +
-          '<p class="quiz-retry"><a class="link-underline" href="' + base + 'pages/discovery.html">Not sure? Try all five for $35</a> &middot; <button type="button" class="link-underline" data-quiz-retake>Retake</button></p>' +
+          '<p class="quiz-retry"><a class="link-underline" href="' + base + 'pages/discovery.html">Not sure? Try all five for $45</a> &middot; <button type="button" class="link-underline" data-quiz-retake>Retake</button></p>' +
         '</div>' +
       '</div>';
   }

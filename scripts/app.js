@@ -135,7 +135,7 @@
       el.className = 'exit-modal'; el.setAttribute('role', 'dialog'); el.setAttribute('aria-modal', 'true'); el.setAttribute('aria-label', 'Discovery set offer');
       el.innerHTML = '<div class="exit-card"><button class="exit-close drawer-close" aria-label="Close">&times;</button>' +
         '<p class="eyebrow eyebrow--center">Before you go</p><h3 style="font-family:var(--serif);font-size:1.9rem;margin:6px 0 10px">Not sure where to start?</h3>' +
-        '<p style="color:var(--muted);margin:0 0 22px">Try all five in the Discovery Set for $35, fully redeemable against your first full-size bottle.</p>' +
+        '<p style="color:var(--muted);margin:0 0 22px">Try all five in the Discovery Set for $45, fully redeemable against your first full-size bottle.</p>' +
         '<div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center"><a class="btn btn--primary" href="' + asset('pages/discovery.html') + '"><span class="btn__label">Try the Discovery Set</span></a>' +
         '<button class="btn btn--ghost exit-dismiss">No thanks</button></div></div>';
       document.body.appendChild(el);
@@ -473,8 +473,9 @@
       var n = Object.keys(distinct).length;
       if (!hasFull && n >= 1 && n < 5) {
         nudge.hidden = false;
-        nudge.innerHTML = '<div class="cart-nudge-in"><span>Add ' + (5 - n) + ' more to complete the collection and save ' + money(151) + '.</span>' +
-          '<button class="btn btn--ghost btn--sm" data-add-bundle="full"><span class="btn__label">Add all five, ' + money(499, { aud: false }) + '</span></button></div>';
+        var fullSave = 5 * DATA.commerce.basePrice - DATA.commerce.deals.full.price;
+        nudge.innerHTML = '<div class="cart-nudge-in"><span>Add ' + (5 - n) + ' more to complete the collection and save ' + money(fullSave) + '.</span>' +
+          '<button class="btn btn--ghost btn--sm" data-add-bundle="full"><span class="btn__label">Add all five, ' + money(DATA.commerce.deals.full.price, { aud: false }) + '</span></button></div>';
       } else { nudge.hidden = true; nudge.innerHTML = ''; }
     }
     // totals (cart drawer + checkout summary share these hooks)
@@ -489,7 +490,7 @@
     store.state.items.forEach(function (l) { if (l.type === 'product') loose += l.qty; if (l.type === 'bundle') hasBundle = true; });
     if (!hasBundle && loose >= 2) {
       bundleHintShown = true;
-      toast('Buying 2 or more? Any 2 is ' + money(230, { aud: false }) + ', a bundle saves you money.');
+      toast('Buying 2 or more? Any 2 is ' + money(DATA.commerce.deals.duo.price, { aud: false }) + ', a bundle saves you money.');
     }
   }
 
@@ -527,7 +528,7 @@
     show('[data-row-discount]', t.codeDiscount > 0 && t.codeLabel && t.codeLabel.indexOf('Discovery') < 0);
     $$('[data-discount-label]').forEach(function (n) { n.textContent = t.codeLabel || 'Discount'; });
     set('[data-sum-discount]', '-' + money(t.codeDiscount));
-    // discovery credit: either auto or via DISCOVER35 code
+    // discovery credit: either auto or via DISCOVER45 code
     var credit = t.discoveryCredit + (t.codeLabel && t.codeLabel.indexOf('Discovery') === 0 ? t.codeDiscount : 0);
     show('[data-row-credit]', credit > 0);
     set('[data-sum-credit]', '-' + money(credit));
@@ -689,7 +690,7 @@
     var thumb0 = DATA.products[0].images.thumb;
     // B15: non-product destinations searchable by keyword
     var specials = [
-      { name: 'The Discovery Set', sub: 'Five 2 mL samples', price: money(DATA.commerce.discovery.price, { aud: false }), href: 'pages/discovery.html', img: thumb0, kw: 'discovery set sample samples try travel 35 miniature' },
+      { name: 'The Discovery Set', sub: 'Five 3 mL samples', price: money(DATA.commerce.discovery.price, { aud: false }), href: 'pages/discovery.html', img: thumb0, kw: 'discovery set sample samples try travel 45 miniature' },
       { name: 'Any 2 Fragrances', sub: 'Bundle, save $30', price: money(DATA.commerce.deals.duo.price, { aud: false }), href: 'pages/bundles.html#duo', img: thumb0, kw: 'bundle duo two 2 save deal offer collection' },
       { name: 'Any 3 Fragrances', sub: 'Bundle, save $70', price: money(DATA.commerce.deals.trio.price, { aud: false }), href: 'pages/bundles.html#trio', img: thumb0, kw: 'bundle trio three 3 save deal offer collection' },
       { name: 'The Complete Collection', sub: 'All five, save $151', price: money(DATA.commerce.deals.full.price, { aud: false }), href: 'pages/bundles.html#full', img: thumb0, kw: 'bundle five 5 all complete collection set save deal offer' },

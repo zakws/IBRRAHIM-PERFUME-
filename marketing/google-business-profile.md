@@ -13,7 +13,7 @@ Because there is no physical shop, set it up as an **online business without a p
    - **Service area:** Australia (or Sydney + major cities)
    - **Phone / website:** the business phone and the live site address
 3. Paste this description (750-character limit, this fits):
-   > IBRAHIM Fragrances is a Sydney fragrance house with five distinctive eau de parfums: Sultan Oud (dark amber), Glamorous (rose gold), Blue Chill (ocean fresh), Charizma (warm amber) and Magic Caramel (rich amber gourmand). Every 90 mL bottle is $130 AUD, with bundle savings, a $35 Discovery Set that is fully redeemable against a full bottle, and free shipping over $180. Designed and shipped from Sydney, Australia.
+   > IBRAHIM Fragrances is a Sydney fragrance house with five distinctive eau de parfums: Sultan Oud (dark amber), Glamorous (rose gold), Blue Chill (ocean fresh), Charizma (warm amber) and Magic Caramel (rich amber gourmand). Every 100 mL bottle is $89.99 AUD, with bundle savings, a $45 Discovery Set that is fully redeemable against a full bottle, and free shipping over $150. Designed and shipped from Sydney, Australia.
 4. Upload 5-10 photos: use the bottle images from `assets/images/products/` (the `-front-card.jpg` files) and lifestyle shots.
 5. Verify the business when Google asks (usually video or phone). Post the Eid offer as a **Google Post** during the campaign.
 

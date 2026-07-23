@@ -17,15 +17,15 @@ built-in Dawn sections, no paid theme needed. A paid dark theme (e.g. "Prestige"
 ## Homepage, section by section (matches the current site top to bottom)
 | Current site | Dawn section | Content |
 | --- | --- | --- |
-| Announcement bar | Announcement bar (supports multiple rotating messages) | The 5 messages: free shipping over $180, 10% first order IBRAHIM10, Discovery Set $35, any 2 $230, any 3 $320 |
+| Announcement bar | Announcement bar (supports multiple rotating messages) | The 5 messages: free shipping over $150, 10% first order IBRAHIM10, Discovery Set $45, any 2 $159.99, any 3 $229.99 |
 | Hero carousel (5 fragrances) | **Slideshow** | One slide per fragrance using `assets/images/hero/<slug>-hero-1600.webp` (dark side = text side). Heading "Scent is Identity", subheading the fragrance name + category, button "Discover <name>" linking to the product |
 | Collection grid | **Featured collection** | Collection "Fragrances", 5 products, 1 row on desktop |
 | Quiz button | **Rich text** with button | "Not sure? Take the 30-second scent quiz" → /pages/quiz |
 | Heritage band | **Image with text** | `sultan-oud-heritage-1400.webp` + the "A modern Middle Eastern fragrance house" copy from the About page |
 | Blue Chill editorial | **Image with text** (reversed) | `blue-chill-lifestyle-1400.webp` + Blue Chill copy + button |
-| Offers (bundles + discovery) | **Multicolumn** (4 columns) | Any 2 $230 / Any 3 $320 / Discovery $35 / All five $499, each with a button (see discounts below) |
+| Offers (bundles + discovery) | **Multicolumn** (4 columns) | Any 2 $159.99 / Any 3 $229.99 / Discovery $45 / All five $369.99, each with a button (see discounts below) |
 | Magic Caramel editorial | **Image with text** | `magic-caramel-flatlay-1200.webp` + copy |
-| Stats strip | **Multicolumn** (5 columns, no images) | 5 fragrances · 90 mL · $35 redeemable · $180 free shipping · $151 saved |
+| Stats strip | **Multicolumn** (5 columns, no images) | 5 fragrances · 100 mL · $45 redeemable · $150 free shipping · $80 saved |
 | Trust section | **Multicolumn** (4 columns) | Eau de Parfum / One bottle language / Free shipping / Secure & simple |
 | Newsletter | **Email signup** | "10% off your first order" (wire the welcome code via a Shopify automation or Klaviyo) |
 | Footer | Footer | Shop / Customer care / Company link lists + socials + "Sydney, Australia" |
@@ -37,7 +37,7 @@ built-in Dawn sections, no paid theme needed. A paid dark theme (e.g. "Prestige"
   and "Returns" (paste from the current site's accordions / policy pages).
 - Add a **Complementary products** block (Search & Discovery app, free) to recreate
   "Pairs beautifully with".
-- The 2 mL sample is a Size variant on every fragrance — it replaces the old
+- The 3 mL sample is a Size variant on every fragrance — it replaces the old
   "$5 sample add-on" idea and the Discovery Set stays its own product.
 
 ## Other pages
@@ -51,14 +51,14 @@ built-in Dawn sections, no paid theme needed. A paid dark theme (e.g. "Prestige"
 
 ## Discounts and bundles
 - `IBRAHIM10` — 10% off, one use per customer (welcome code).
-- `DISCOVER35` — $35 off orders over $130, one use per customer (discovery redemption).
+- `DISCOVER45` — $45 off orders over $89.99, one use per customer (discovery redemption).
 - **Eid campaign** — automatic discount "EID15", 15% off everything, scheduled with
   start/end dates (Shopify discounts support scheduling natively). Add an Eid slide to
   the slideshow for the same window.
-- **Bundles:** simplest free route = discount codes `DUO230` ($30 off min qty 2) and
-  `TRIO320` ($70 off min qty 3), shown as homepage offer text. Polished route = a
+- **Bundles:** simplest free route = discount codes `DUO20` ($20 off min qty 2) and
+  `TRIO40` ($40 off min qty 3), shown as homepage offer text. Polished route = a
   quantity-breaks app (e.g. "Kaching Bundles", ~$15/mo) that shows the 2/3/5 tiers on
-  the product page. The "Complete Collection $499" can also be a fixed bundle via
+  the product page. The "Complete Collection $369.99" can also be a fixed bundle via
   Shopify's free **Bundles** app.
 
 ## Sales channels (after the store works)

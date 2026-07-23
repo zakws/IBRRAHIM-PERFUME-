@@ -42,7 +42,7 @@
       if (l.type === 'bundle') return dealBy(l.key) && Array.isArray(l.slugs) && l.slugs.every(validSlug);
       return false;
     });
-    if (s.code && !(s.code === 'DISCOVER35' || C.codes[s.code] || (campaign() && campaign().code && s.code === campaign().code.code))) s.code = null;
+    if (s.code && !(s.code === 'DISCOVER45' || C.codes[s.code] || (campaign() && campaign().code && s.code === campaign().code.code))) s.code = null;
     if (!s.gift || typeof s.gift !== 'object') s.gift = { wrap: false, message: '' };
     if (s.items.length !== before) { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {} }
     return s;
@@ -82,7 +82,7 @@
     save();
     return { ok: true };
   }
-  // B11: 2 mL sample add-on
+  // B11: 3 mL sample add-on
   function addSample(slug, qty) {
     if (!DATA.getProduct(slug)) return { ok: false };
     qty = Math.max(1, qty || 1);
@@ -119,10 +119,10 @@
       return { ok: false, message: 'That code is not active yet. It unlocks during ' + camp.name + '.' };
     }
     var t0 = rawTotals();
-    if (code === 'DISCOVER35') {
+    if (code === 'DISCOVER45') {
       if (t0.hasDiscovery) return { ok: false, message: 'Your discovery credit is already applied.' };
       if (!t0.hasFull) return { ok: false, message: 'Add a full-size fragrance to redeem this.' };
-      state.code = code; save(); return { ok: true, message: 'Discovery credit applied: $35 off.' };
+      state.code = code; save(); return { ok: true, message: 'Discovery credit applied: ' + money(C.discovery.redeemable, { aud: false }) + ' off.' };
     }
     if (C.codes[code]) { state.code = code; save(); return { ok: true, message: C.codes[code].label + ' applied.' }; }
     return { ok: false, message: 'That code is not valid.' };
@@ -155,7 +155,7 @@
 
     var codeDiscount = 0, codeLabel = '';
     if (state.code) {
-      if (state.code === 'DISCOVER35') {
+      if (state.code === 'DISCOVER45') {
         if (!t.hasDiscovery && t.hasFull) { codeDiscount = C.discovery.redeemable; codeLabel = 'Discovery credit'; }
         else { state.code = null; }
       } else if (C.codes[state.code]) {

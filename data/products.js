@@ -14,8 +14,8 @@
 })(typeof self !== 'undefined' ? self : this, function () {
   'use strict';
 
-  var BASE_PRICE = 130;
-  var SIZE = '90 mL';
+  var BASE_PRICE = 89.99;
+  var SIZE = '100 mL';
 
   var brand = {
     name: 'IBRAHIM',
@@ -42,7 +42,7 @@
     basePrice: BASE_PRICE,
     currency: 'AUD',
     shipping: {
-      freeThreshold: 180,
+      freeThreshold: 150,
       standard: 12,
       express: 22,
       standardLabel: 'Standard (3-5 business days)',
@@ -55,19 +55,19 @@
       SCENT15: { type: 'percent', value: 15, label: '15% members preview' },
     },
     deals: {
-      duo: { id: 'bundle-duo', key: 'duo', size: 2, price: 230, label: 'Any 2 Fragrances' },
-      trio: { id: 'bundle-trio', key: 'trio', size: 3, price: 320, label: 'Any 3 Fragrances' },
-      full: { id: 'bundle-full', key: 'full', size: 5, price: 499, label: 'The Complete Collection' },
+      duo: { id: 'bundle-duo', key: 'duo', size: 2, price: 159.99, label: 'Any 2 Fragrances' },
+      trio: { id: 'bundle-trio', key: 'trio', size: 3, price: 229.99, label: 'Any 3 Fragrances' },
+      full: { id: 'bundle-full', key: 'full', size: 5, price: 369.99, label: 'The Complete Collection' },
     },
     discovery: {
       id: 'discovery-set',
       name: 'The Discovery Set',
-      price: 35,
-      redeemable: 35,
-      size: '5 x 2 mL',
+      price: 45,
+      redeemable: 45,
+      size: '5 x 3 mL',
       concentration: 'Eau de Parfum',
     },
-    sample: { price: 5, size: '2 mL' },   // B11: single-sample add-on
+    sample: { price: 5, size: '3 mL' },   // B11: single-sample add-on
     giftWrap: { price: 6 },               // B7: optional gift wrapping
   };
 
@@ -211,11 +211,11 @@
   }
 
   var announcements = [
-    { t: 'Complimentary shipping on orders over $180', href: 'pages/shipping.html' },
+    { t: 'Complimentary shipping on orders over $150', href: 'pages/shipping.html' },
     { t: '10% off your first order with code IBRAHIM10', href: 'index.html#newsletter' },
-    { t: 'The Discovery Set, five scents for $35', href: 'pages/discovery.html' },
-    { t: 'Any 2 full-size fragrances for $230', href: 'pages/bundles.html#duo' },
-    { t: 'Any 3 full-size fragrances for $320', href: 'pages/bundles.html#trio' },
+    { t: 'The Discovery Set, five scents for $45', href: 'pages/discovery.html' },
+    { t: 'Any 2 full-size fragrances for $159.99', href: 'pages/bundles.html#duo' },
+    { t: 'Any 3 full-size fragrances for $229.99', href: 'pages/bundles.html#trio' },
   ];
 
   function getProduct(slug) {

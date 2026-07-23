@@ -211,7 +211,7 @@ function cartDrawer(base) {
       <div class="sum-row"><span>Subtotal</span><span data-sum-subtotal>$0 AUD</span></div>
       <div class="sum-row save" data-row-savings hidden><span>Bundle savings</span><span data-sum-savings>-$0 AUD</span></div>
       <div class="sum-row discount" data-row-discount hidden><span data-discount-label>Discount</span><span data-sum-discount>-$0 AUD</span></div>
-      <div class="sum-row" data-row-credit hidden><span>Discovery credit</span><span class="save" data-sum-credit>-$35 AUD</span></div>
+      <div class="sum-row" data-row-credit hidden><span>Discovery credit</span><span class="save" data-sum-credit>-$45 AUD</span></div>
       <div class="sum-row"><span>Shipping</span><span data-sum-shipping>Calculated at checkout</span></div>
       <div class="sum-row total"><span>Total</span><span data-sum-total>$0 AUD</span></div>
       <a class="btn btn--primary btn--block" href="${u(base, 'pages/checkout.html')}" data-magnetic data-checkout-link><span class="btn__label">Checkout</span></a>

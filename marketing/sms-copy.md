@@ -7,7 +7,7 @@ Australian law requires the opt-out line — keep "Reply STOP to opt out" on eve
 > IBRAHIM: Welcome to the house. Your 10% code: IBRAHIM10. Five scents, one signature: [SITE_URL] Reply STOP to opt out
 
 **Abandoned bag**
-> IBRAHIM: Your bag is saved. Free shipping over $180. Finish your order: [SITE_URL] Reply STOP to opt out
+> IBRAHIM: Your bag is saved. Free shipping over $150. Finish your order: [SITE_URL] Reply STOP to opt out
 
 **Back in stock**
 > IBRAHIM: [Fragrance] is back. It went fast last time: [SITE_URL] Reply STOP to opt out

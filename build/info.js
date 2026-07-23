@@ -91,7 +91,7 @@ function terms(base) {
 function giftCards(base) {
   return shell(base, { crumb: 'Gift Cards', eyebrow: 'Shop', h1: 'Gift Cards', title: 'Gift Cards — IBRAHIM Fragrances', description: 'IBRAHIM digital gift cards.', sub: 'The elegant way to let someone choose their own signature.' },
     prose([
-      p('Digital IBRAHIM gift cards are delivered by email and can be used on any fragrance, bundle or the Discovery Set. Available in $50, $130, $250 and $499 denominations.'),
+      p('Digital IBRAHIM gift cards are delivered by email and can be used on any fragrance, bundle or the Discovery Set. Available in $50, $90, $180 and $370 denominations.'),
       h2('How it works'),
       ul(['Choose an amount and enter the recipient details.', 'The card arrives by email with a unique code.', 'It never expires and can be used across multiple orders.']),
       p('<em>Gift card purchasing is not enabled in this demonstration.</em>'),
@@ -126,10 +126,10 @@ function trackOrder(base) {
 function faqs(base) {
   const items = [
     ['How long do the fragrances last?', 'All IBRAHIM scents are Eau de Parfum, composed for 6 to 11 hours of wear depending on the fragrance and your skin. Longevity is listed on every product page.'],
-    ['What is the Discovery Set?', `All five fragrances in 2 mL travel sprays for ${money(C.discovery.price)}. The full $35 is redeemable against your first full-size bottle with code DISCOVER35.`],
+    ['What is the Discovery Set?', `All five fragrances in 3 mL travel sprays for ${money(C.discovery.price)}. The full ${money(C.discovery.redeemable)} is redeemable against your first full-size bottle with code DISCOVER45.`],
     ['How do the bundles work?', `Any 2 full-size fragrances are ${money(C.deals.duo.price)}, any 3 are ${money(C.deals.trio.price)}, and all five are ${money(C.deals.full.price)}. Build one on the Bundles page and it adds to your bag at the bundle price.`],
     ['When is shipping free?', `Standard shipping is complimentary on all orders over ${money(C.shipping.freeThreshold)} and on every bundle.`],
-    ['Are the bottles the same size?', 'Yes. Every full-size fragrance is 90 mL Eau de Parfum. What changes between scents is the fragrance and the world it belongs to.'],
+    ['Are the bottles the same size?', 'Yes. Every full-size fragrance is 100 mL Eau de Parfum. What changes between scents is the fragrance and the world it belongs to.'],
     ['Is this a real store?', 'This is a front-end demonstration. You can browse, build bundles, and complete a demo checkout, but no payment is taken and no order is shipped.'],
   ];
   const acc = items.map(([q, a], i) => `<div class="accordion-item">

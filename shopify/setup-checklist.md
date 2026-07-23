@@ -13,7 +13,7 @@ Time: roughly one afternoon. Have ready: the business email, ABN, and bank detai
 1. Admin → **Products** → **Import** → choose `shopify/products-import.csv` → Import.
 2. Shopify fetches all bottle photos automatically from the live site (they are already
    verified working). Wait for the import email, then spot-check the five fragrances:
-   each should show its photo gallery, $130 price, and a "2 mL Sample" $5 size option.
+   each should show its photo gallery, $89.99 price, and a "3 mL Sample" $5 size option.
 3. **Products → Collections → Create collection**: title **Fragrances**, add the five
    fragrances (not the Discovery Set or Gift Wrapping). This collection powers the
    homepage grid and the main menu.
@@ -30,7 +30,7 @@ Time: roughly one afternoon. Have ready: the business email, ABN, and bank detai
 
 ## 4. Shipping (15 min)
 1. **Settings → Shipping and delivery** → edit the General profile:
-   - Standard: **$12**, free over **$180** (add a "Free over $180" rate condition)
+   - Standard: **$12**, free over **$150** (add a "Free over $150" rate condition)
    - Express: **$22**
 2. Important, before real orders: agree perfume (dangerous goods) posting with the
    carrier — Australia Post allows limited quantities domestically but the account may
@@ -54,9 +54,9 @@ Create in **Discounts**:
 | Code | What | Settings |
 | --- | --- | --- |
 | IBRAHIM10 | 10% off | One use per customer |
-| DISCOVER35 | $35 off | Minimum purchase $130, one use per customer |
-| DUO230 | $30 off | Minimum quantity 2 (fragrances collection) |
-| TRIO320 | $70 off | Minimum quantity 3 (fragrances collection) |
+| DISCOVER45 | $45 off | Minimum purchase $89.99, one use per customer |
+| DUO20 | $20 off | Minimum quantity 2 (fragrances collection) |
+| TRIO40 | $40 off | Minimum quantity 3 (fragrances collection) |
 | EID15 (automatic) | 15% off | Set start/end dates for the Ramadan-Eid window |
 
 For tier-style bundle pricing shown on product pages, add a quantity-breaks app later
@@ -76,7 +76,7 @@ Products sync automatically. Also add **Judge.me** (free) for reviews.
 ## 10. Before taking the first real order
 - [ ] Place a test order with Shopify's test mode, then a real $1 test, refund it
 - [ ] Check the store on a phone
-- [ ] Bottle size confirmed and matching everywhere (site says 90 mL)
+- [ ] Bottle size confirmed and matching everywhere (site says 100 mL)
 - [ ] Arabic plaque text verified by a native reader
 - [ ] Real product photography ordered (AI renders are placeholders)
 - [ ] Dangerous-goods shipping confirmed with the carrier

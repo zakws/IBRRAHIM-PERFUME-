@@ -14,7 +14,7 @@ This is a **front-end demonstration**. No backend, no payment provider, no data 
 4. **Charizma** — Warm Amber — *Warm. Bold. Charismatic.*
 5. **Magic Caramel** — Rich Amber Gourmand — *Warm. Addictive. Unforgettable.*
 
-Every full-size fragrance is **$130 AUD**, **90 mL**, Eau de Parfum.
+Every full-size fragrance is **$89.99 AUD**, **100 mL**, Eau de Parfum.
 
 > Detailed fragrance notes are only asserted for **Magic Caramel** (approved copy: Opening — caramelized warmth; Heart — soft spice and creamy sweetness; Base — vanilla, amber and woody notes). The other four use their approved category and character wording, with **no invented ingredient claims** (they show a "Character" panel instead of a note pyramid).
 
@@ -25,8 +25,8 @@ Every full-size fragrance is **$130 AUD**, **90 mL**, Eau de Parfum.
 - **Five-slide hero carousel** — one slide per fragrance, using each fragrance's own atmospheric hero image. Text sits over the black negative space, never over the bottle or plaque. Keyboard, dots, swipe and autoplay, all respecting `prefers-reduced-motion`.
 - **Collection** of five themed cards, each using only its own `Product Card` photograph, with a subtle per-fragrance accent colour (never a recoloured photo).
 - **Individual product pages** with an atmospheric banner, a four-view gallery (front / angle / three-quarter / detail), a notes pyramid *or* character panel, specs, editorial "world", craftsmanship and heritage bands, shipping/returns accordions, related fragrances and a final atmospheric CTA.
-- **Discovery Set** page built from the five real matched product images (clearly presented as 2 mL samples, never a full-size bottle dressed as a vial).
-- **Interactive bundle builder** (any 2 for $230, any 3 for $320, all five for $499) where every selected slot shows that fragrance's own photograph.
+- **Discovery Set** page built from the five real matched product images (clearly presented as 3 mL samples, never a full-size bottle dressed as a vial).
+- **Interactive bundle builder** (any 2 for $159.99, any 3 for $229.99, all five for $369.99) where every selected slot shows that fragrance's own photograph.
 - **Working cart** — slide-out drawer, quantity controls, bundle savings, discount codes, free-shipping progress, empty state, `localStorage` persistence, and automatic **sanitisation** of any stale product/bundle IDs on load.
 - **Demo checkout + confirmation** — validation, order summary, shipping selection, generated order number, cart clearing.
 - **Motion system** — hover lift and glow, magnetic buttons, count-up statistics, screen-entry reveals. All respect reduced motion.
@@ -133,11 +133,11 @@ Change a product, price or image role in `data/products.js` (and `build/photo-ma
 
 ## Pricing and offers
 
-- Full-size fragrance: **$130 AUD**, 90 mL, Eau de Parfum.
-- **Any 2** for **$230** (save $30) · **Any 3** for **$320** (save $70) · **All five** for **$499** (save $151).
-- **Discovery Set** $35, fully **redeemable** against a full-size bottle (auto-credited when both are in the bag).
-- **Free shipping** over $180 and on every bundle. Standard shipping otherwise $12, express $22.
-- Demo codes: `IBRAHIM10` / `WELCOME10` (10% off), `SCENT15` (15%), `DISCOVER35` ($35 discovery credit).
+- Full-size fragrance: **$89.99 AUD**, 100 mL, Eau de Parfum.
+- **Any 2** for **$159.99** (save $20) · **Any 3** for **$229.99** (save $40) · **All five** for **$369.99** (save $80).
+- **Discovery Set** $45, fully **redeemable** against a full-size bottle (auto-credited when both are in the bag).
+- **Free shipping** over $150 and on every bundle. Standard shipping otherwise $12, express $22.
+- Demo codes: `IBRAHIM10` / `WELCOME10` (10% off), `SCENT15` (15%), `DISCOVER45` ($45 discovery credit).
 
 ---
 

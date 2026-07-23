@@ -58,7 +58,7 @@ const lines = [HEADERS.join(',')];
 DATA.products.forEach((p) => {
   const skuBase = 'IBR-' + p.slug.toUpperCase().replace(/-/g, '');
   const imgs = imageList(p);
-  // main row: product + 90 mL variant + first image
+  // main row: product + 100 mL variant + first image
   lines.push(row({
     Handle: p.slug,
     Title: `${p.name} Eau de Parfum`,
@@ -86,10 +86,10 @@ DATA.products.forEach((p) => {
     'SEO Description': `Buy ${p.name}, a ${p.family.toLowerCase()} eau de parfum by IBRAHIM Fragrances. ${p.shortDesc} ${p.size}, $${p.price} AUD. Ships from Sydney.`,
     Status: 'active',
   }));
-  // second variant: 2 mL sample
+  // second variant: 3 mL sample
   lines.push(row({
     Handle: p.slug,
-    'Option1 Value': '2 mL Sample',
+    'Option1 Value': '3 mL Sample',
     'Variant SKU': skuBase + '-2',
     'Variant Grams': '20',
     'Variant Inventory Tracker': 'shopify',
@@ -110,7 +110,7 @@ DATA.products.forEach((p) => {
 lines.push(row({
   Handle: 'discovery-set',
   Title: 'The Discovery Set',
-  'Body (HTML)': `<p>All five IBRAHIM fragrances in 2 mL travel sprays: Sultan Oud, Glamorous, Blue Chill, Charizma and Magic Caramel. The considered way to find your signature before committing to a full bottle.</p><p><strong>The full $35 is redeemable against your first full-size bottle</strong> — use code DISCOVER35 at checkout on a later order.</p>`,
+  'Body (HTML)': `<p>All five IBRAHIM fragrances in 3 mL travel sprays: Sultan Oud, Glamorous, Blue Chill, Charizma and Magic Caramel. The considered way to find your signature before committing to a full bottle.</p><p><strong>The full $45 is redeemable against your first full-size bottle</strong> — use code DISCOVER45 at checkout on a later order.</p>`,
   Vendor: 'IBRAHIM Fragrances',
   'Product Category': CATEGORY,
   Type: 'Discovery Set',
@@ -131,7 +131,7 @@ lines.push(row({
   'Image Position': '1',
   'Image Alt Text': 'IBRAHIM Discovery Set (placeholder image, replace with set photo)',
   'SEO Title': 'The Discovery Set — IBRAHIM Fragrances',
-  'SEO Description': 'All five IBRAHIM fragrances in 2 mL travel sprays for $35, fully redeemable against your first full-size bottle.',
+  'SEO Description': 'All five IBRAHIM fragrances in 3 mL travel sprays for $45, fully redeemable against your first full-size bottle.',
   Status: 'active',
 }));
 

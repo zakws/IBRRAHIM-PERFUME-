@@ -48,7 +48,7 @@ const EMAILS = {
     p('Here is your welcome gift: <b>10% off your first order</b> with the code below.') +
     `<div style="text-align:center;margin:26px 0"><span style="display:inline-block;border:1px dashed ${GOLD};border-radius:6px;padding:12px 30px;font-family:Arial,sans-serif;font-size:20px;letter-spacing:4px;color:${INK}">IBRAHIM10</span></div>` +
     btn('Shop the Collection', SITE + '/index.html#collection') +
-    p('Not sure where to start? The Discovery Set gives you all five scents for $35, fully redeemable against your first full bottle.')),
+    p('Not sure where to start? The Discovery Set gives you all five scents for $45, fully redeemable against your first full bottle.')),
   'welcome-2-find-your-scent.html': layout('Five worlds. Which one is yours?',
     h('Five worlds. One signature.') + hi +
     p('<b>Sultan Oud</b> is deep and commanding. <b>Glamorous</b> is radiant rose gold. <b>Blue Chill</b> is crisp ocean freshness. <b>Charizma</b> is warm and magnetic. <b>Magic Caramel</b> is sweet, rich and unforgettable.') +
@@ -58,7 +58,7 @@ const EMAILS = {
   'abandoned-cart.html': layout('Your bag is waiting for you.',
     h('Still thinking it over?') + hi +
     p('You left something beautiful in your bag. It is saved and ready whenever you are.') +
-    p('A small reminder: shipping is free over $180, and every bundle ships free.') +
+    p('A small reminder: shipping is free over $150, and every bundle ships free.') +
     btn('Return to Your Bag', SITE + '/index.html') +
     p('Questions about a scent? Just reply to this email, a real person in Sydney reads these.')),
   'post-purchase.html': layout('Thank you. Here is how to wear it well.',
